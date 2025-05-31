@@ -1,8 +1,6 @@
 # PGCCHIB - Processamento Gráfico (EM ANDAMENTO)
 
-Este repositório é baseado na estrutura do projeto PGCCHIB - Processamento Gráfico, fornecido pela disciplina de Processamento Gráfico.
-
-A atividade vivencial do dia 31 de maio foi implementada no arquivo `ParallaxScrolling.cpp`, localizado em `src/ExemplosMoodle/M5_Material`.
+Este repositório é baseado na estrutura do projeto PGCCHIB - Processamento Gráfico, fornecido pela disciplina de Processamento Gráfico. A atividade vivencial do dia 31 de maio.
 
 https://github.com/user-attachments/assets/67d87311-53b6-43f1-9e59-68840ebef9d0
 
