@@ -2,7 +2,7 @@
 
 Este repositório é baseado na estrutura do projeto PGCCHIB - Processamento Gráfico, fornecido pela disciplina de Processamento Gráfico.
 
-A atividade vivencial do dia 17 de maio foi implementada no arquivo `Triangulos.cpp`, localizado em `src/Vivencial`.
+A atividade vivencial do dia 31 de maio foi implementada no arquivo `ParallaxScrolling.cpp`, localizado em `src/ExemplosMoodle/M5_Material`.
 
 ## 🛠️ Como compilar e rodar o projeto (PowerShell - Windows)
 Se quiser compilar e rodar o projeto do zero, siga os comandos abaixo:
