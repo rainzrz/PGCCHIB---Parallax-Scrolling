@@ -16,8 +16,6 @@ cmake --build .
 .\Debug\ParallaxScrolling.exe
 ```
 
-![image](https://github.com/user-attachments/assets/cd366e8e-770c-42de-bb50-bfef6dc35bb0)
-
 Siga as instruções detalhadas em [GettingStarted.md](GettingStarted.md) para configurar e compilar o projeto.
 
 ## ⚠️ **IMPORTANTE: Baixar a GLAD Manualmente**
