@@ -36,7 +36,7 @@ include_directories(${glm_SOURCE_DIR})
 
 # Lista de exemplos/exercícios para criar executáveis
 set(EXERCISES
-    ExemplosMoodle/M5_material/exemplo_05
+    ExemplosMoodle/M5_material/ParallaxScrolling
 )
 
 # Adiciona as flags de compilação apenas se não for MSVC
