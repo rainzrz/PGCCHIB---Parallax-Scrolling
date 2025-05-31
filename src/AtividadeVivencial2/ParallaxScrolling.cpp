@@ -1,4 +1,3 @@
-
 // STB_IMAGE
 #define STB_IMAGE_IMPLEMENTATION
 #include <stb_image.h>
@@ -20,10 +19,10 @@
 
 using namespace std;
 
-int g_gl_width = 480;
-int g_gl_height = 480;
+int g_gl_width = 800;
+int g_gl_height = 600;
 
-float PARALLAX_RATE = 0.01f;
+float PARALLAX_RATE = 0.0f;
 
 GLFWwindow *g_window = NULL;
 
@@ -81,8 +80,8 @@ int main()
 	vector<Layer *> layers;
 
 	Layer *l0 = new Layer;
-	l0->filename = "../src/ExemplosMoodle/M5_Material/w0.png";
-	l0->z = -0.54;
+	l0->filename = "../src/AtividadeVivencial2/IMG/layer07_Sky.png";
+	l0->z = 0;
 	l0->offsetx = 0;
 	l0->offsety = 0;
 	l0->ratex = 0.0;
@@ -91,45 +90,75 @@ int main()
 	loadTexture(l0->tid, l0->filename);
 
 	Layer *l1 = new Layer;
-	l1->filename = "../src/ExemplosMoodle/M5_Material/w1.png";
-	l1->z = -0.53;
+	l1->filename = "../src/AtividadeVivencial2/IMG/layer06_Rocks.png";
+	l1->z = 0;
 	l1->offsetx = 0;
 	l1->offsety = 0;
-	l1->ratex = 0.2;
+	l1->ratex = 0.002;
 	l1->ratey = 0;
 	layers.push_back(l1);
 	loadTexture(l1->tid, l1->filename);
 
 	Layer *l2 = new Layer;
-	l2->filename = "../src/ExemplosMoodle/M5_Material/w2.png";
-	l2->z = -0.52;
+	l2->filename = "../src/AtividadeVivencial2/IMG/layer05_Hills.png";
+	l2->z = 0;
 	l2->offsetx = 0;
 	l2->offsety = 0;
-	l2->ratex = 0.4;
+	l2->ratex = 0.004;
 	l2->ratey = 0;
 
 	layers.push_back(l2);
 	loadTexture(l2->tid, l2->filename);
 
 	Layer *l3 = new Layer;
-	l3->filename = "../src/ExemplosMoodle/M5_Material/w3.png";
-	l3->z = -0.51;
+	l3->filename = "../src/AtividadeVivencial2/IMG/layer04_Clouds.png";
+	l3->z = 0;
 	l3->offsetx = 0;
 	l3->offsety = 0;
-	l3->ratex = 0.6;
+	l3->ratex = 0.006;
 	l3->ratey = 0;
 	layers.push_back(l3);
 	loadTexture(l3->tid, l3->filename);
 
 	Layer *l4 = new Layer;
-	l4->filename = "../src/ExemplosMoodle/M5_Material/w4.png";
-	l4->z = -0.5;
+	l4->filename = "../src/AtividadeVivencial2/IMG/layer03_Hills_Castle.png";
+	l4->z = 0;
 	l4->offsetx = 0;
 	l4->offsety = 0;
-	l4->ratex = 0.8;
+	l4->ratex = 0.008;
 	l4->ratey = 0;
 	layers.push_back(l4);
 	loadTexture(l4->tid, l4->filename);
+
+	Layer *l5 = new Layer;
+	l5->filename = "../src/AtividadeVivencial2/IMG/layer02_Trees_rocks.png";
+	l5->z = 0;
+	l5->offsetx = 0;
+	l5->offsety = 0;
+	l5->ratex = 0.008;
+	l5->ratey = 0;
+	layers.push_back(l5);
+	loadTexture(l5->tid, l5->filename);
+
+	Layer *l6 = new Layer;
+	l6->filename = "../src/AtividadeVivencial2/IMG/layer01_Ground.png";
+	l6->z = 0;
+	l6->offsetx = 0;
+	l6->offsety = 0;
+	l6->ratex = 0.008;
+	l6->ratey = 0;
+	layers.push_back(l6);
+	loadTexture(l6->tid, l6->filename);
+
+	Layer *l7 = new Layer;
+	l7->filename = "../src/AtividadeVivencial2/IMG/personagem.png";
+	l7->z = 0;
+	l7->offsetx = 0;
+	l7->offsety = 0;
+	l7->ratex = 0.0;
+	l7->ratey = 0;
+	layers.push_back(l7);
+	loadTexture(l7->tid, l7->filename);
 
 	// LOAD TEXTURES
 
@@ -169,8 +198,8 @@ int main()
 
 	char vertex_shader[1024 * 256];
 	char fragment_shader[1024 * 256];
-	parse_file_into_str("../src/ExemplosMoodle/M5_Material/_camadas_vs.glsl", vertex_shader, 1024 * 256);
-	parse_file_into_str("../src/ExemplosMoodle/M5_Material/_camadas_fs.glsl", fragment_shader, 1024 * 256);
+	parse_file_into_str("../src/AtividadeVivencial2/_camadas_vs.glsl", vertex_shader, 1024 * 256);
+	parse_file_into_str("../src/AtividadeVivencial2/_camadas_fs.glsl", fragment_shader, 1024 * 256);
 
 	GLuint vs = glCreateShader(GL_VERTEX_SHADER);
 	const GLchar *p = (const GLchar *)vertex_shader;
@@ -253,14 +282,19 @@ int main()
 		{
 			glfwSetWindowShouldClose(g_window, 1);
 		}
-		if (GLFW_PRESS == glfwGetKey(g_window, GLFW_KEY_UP))
+		if (GLFW_PRESS == glfwGetKey(g_window, GLFW_KEY_D))
 		{
-			PARALLAX_RATE += 0.001f;
+			PARALLAX_RATE = 0.05f;  // valor fixo para ir para direita
 		}
-		if (GLFW_PRESS == glfwGetKey(g_window, GLFW_KEY_DOWN))
+		else if (GLFW_PRESS == glfwGetKey(g_window, GLFW_KEY_A))
 		{
-			PARALLAX_RATE -= 0.001f;
+			PARALLAX_RATE = -0.05f; // valor fixo para ir para esquerda
 		}
+		else
+		{
+    PARALLAX_RATE = 0.0f;    // para quando não está pressionando nada
+}
+
 		// put the stuff we've been drawing onto the display
 		glfwSwapBuffers(g_window);
 	}

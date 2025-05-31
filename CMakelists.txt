@@ -36,7 +36,7 @@ include_directories(${glm_SOURCE_DIR})
 
 # Lista de exemplos/exercícios para criar executáveis
 set(EXERCISES
-    ExemplosMoodle/M5_material/ParallaxScrolling
+    AtividadeVivencial2/ParallaxScrolling
 )
 
 # Adiciona as flags de compilação apenas se não for MSVC
@@ -67,7 +67,7 @@ foreach(EXERCISE ${EXERCISES})
     set(SOURCES src/${EXERCISE}.cpp ${GLAD_C_FILE})
 
     # Se quiser manter gl_utils.cpp separado, descomente a linha abaixo
-    list(APPEND SOURCES src/ExemplosMoodle/M5_material/gl_utils.cpp)
+    list(APPEND SOURCES src/AtividadeVivencial2/gl_utils.cpp)
 
     add_executable(${EXE_NAME} ${SOURCES})
 
