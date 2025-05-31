@@ -4,8 +4,7 @@ Este repositório é baseado na estrutura do projeto PGCCHIB - Processamento Gr�
 
 A atividade vivencial do dia 31 de maio foi implementada no arquivo `ParallaxScrolling.cpp`, localizado em `src/ExemplosMoodle/M5_Material`.
 
-![image](https://github.com/user-attachments/assets/01b3de50-797f-49ff-a656-ed9fe781fb27)
-
+https://github.com/user-attachments/assets/67d87311-53b6-43f1-9e59-68840ebef9d0
 
 ## 🛠️ Como compilar e rodar o projeto (PowerShell - Windows)
 Se quiser compilar e rodar o projeto do zero, siga os comandos abaixo:
